@@ -8,7 +8,7 @@
 
   <div>
     <%= link_to "Edit this room", edit_room_path(@room) %> |
-    <%= link_to "Back to rooms", rooms_path %>
+    <%= link_to "Back to rooms", rooms_path, "data-turbo-frame": "_top" %>
   </div>
 <% end %>
 
