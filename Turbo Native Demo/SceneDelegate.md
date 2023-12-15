@@ -16,8 +16,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(windowScene: windowScene)
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
+
+        visit()
     }
 
+    private func visit() {
+        let controller = UIViewController()
+        controller.view.backgroundColor = .green
+        navigationController.pushViewController(controller, animated: true)
+    }
 }
 
 ```
