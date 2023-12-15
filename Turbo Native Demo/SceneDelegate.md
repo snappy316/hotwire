@@ -12,6 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private let navigationController = UINavigationController()
     private lazy var session: Session = {
         let session = Session()
+        session.delegate = self
         return session
     }()
 
@@ -29,6 +30,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let controller = VisitableViewController(url: url)
         session.visit(controller, action: .advance)
         navigationController.pushViewController(controller, animated: true)
+    }
+}
+
+extension SceneDelegate: SessionDelegate {
+    func session(_ session: Turbo.Session, didProposeVisit proposal: Turbo.VisitProposal) {
+        let controller = VisitableViewController(url: proposal.url)
+        session.visit(controller, options: proposal.options)
+        navigationController.pushViewController(controller, animated: true)
+    }
+
+    func session(_ session: Turbo.Session, didFailRequestForVisitable visitable: Turbo.Visitable, error: Error) {
+        // TODO: Handle errors
+    }
+
+    func sessionWebViewProcessDidTerminate(_ session: Turbo.Session) {
+        // TODO: Handle dead web view
     }
 }
 
