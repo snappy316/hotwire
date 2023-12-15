@@ -12,6 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
         self.window?.rootViewController = UIViewController()
+        self.window?.rootViewController?.view.backgroundColor = .orange
         self.window?.makeKeyAndVisible()
     }
 
