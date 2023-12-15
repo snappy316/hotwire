@@ -21,8 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     private func visit() {
-        let controller = UIViewController()
-        controller.view.backgroundColor = .green
+        let url = URL(string: "http://localhost:3000")!
+        let controller = VisitableViewController(url: url)
         navigationController.pushViewController(controller, animated: true)
     }
 }
