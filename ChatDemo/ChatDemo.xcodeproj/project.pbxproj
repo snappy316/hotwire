@@ -16,6 +16,7 @@
 		FED660DB2B2CE3CA0074F261 /* ChatDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED660DA2B2CE3CA0074F261 /* ChatDemoTests.swift */; };
 		FED660E52B2CE3CA0074F261 /* ChatDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED660E42B2CE3CA0074F261 /* ChatDemoUITests.swift */; };
 		FED660E72B2CE3CA0074F261 /* ChatDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED660E62B2CE3CA0074F261 /* ChatDemoUITestsLaunchTests.swift */; };
+		FED660F52B2CE50D0074F261 /* Turbo in Frameworks */ = {isa = PBXBuildFile; productRef = FED660F42B2CE50D0074F261 /* Turbo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FED660F52B2CE50D0074F261 /* Turbo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = ChatDemo;
+			packageProductDependencies = (
+				FED660F42B2CE50D0074F261 /* Turbo */,
+			);
 			productName = ChatDemo;
 			productReference = FED660C02B2CE3C80074F261 /* ChatDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = FED660B72B2CE3C80074F261;
+			packageReferences = (
+				FED660F32B2CE50D0074F261 /* XCRemoteSwiftPackageReference "turbo-ios" */,
+			);
 			productRefGroup = FED660C12B2CE3C80074F261 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -601,6 +609,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FED660F32B2CE50D0074F261 /* XCRemoteSwiftPackageReference "turbo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hotwired/turbo-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FED660F42B2CE50D0074F261 /* Turbo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FED660F32B2CE50D0074F261 /* XCRemoteSwiftPackageReference "turbo-ios" */;
+			productName = Turbo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FED660B82B2CE3C80074F261 /* Project object */;
 }
