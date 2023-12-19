@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+turbo-frame {
+  @apply block border-2 border-blue-700;
+}
